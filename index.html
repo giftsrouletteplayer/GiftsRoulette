@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifts Roulette - Полное руководство</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
+    <style>
+        :root {
+            --main-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --dark-bg: #2D3436;
+            --section-spacing: 6rem;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--dark-bg);
+            color: white;
+            line-height: 1.8;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(45deg, #2d3436 0%, #434d52 100%);
+        }
+
+        .master-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .detailed-section {
+            margin: var(--section-spacing) 0;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .grid-system {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .info-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .numbered-list {
+            counter-reset: section;
+            margin: 2rem 0;
+        }
+
+        .numbered-item {
+            margin: 2rem 0;
+            padding-left: 3rem;
+            position: relative;
+        }
+
+        .numbered-item::before {
+            content: counter(section);
+            counter-increment: section;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5rem;
+            color: var(--main-color);
+        }
+
+        .legal-terms {
+            counter-reset: section;
+        }
+        
+        .term-item {
+            margin: 2.5rem 0;
+            padding-left: 2rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+        
+        .term-item h3 {
+            font-size: 1.3rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+        
+        .term-item ul {
+            list-style-type: square;
+            margin-left: 1.5rem;
+        }
+        
+        .term-item li {
+            margin: 0.8rem 0;
+            opacity: 0.9;
+        }
+
+        .acceptance-notice {
+            background: rgba(255, 107, 107, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            border: 2px solid var(--main-color);
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Герой -->
+        <section class="hero">
+            <div data-aos="zoom-in">
+                <h1 style="font-size: 4rem; margin-bottom: 2rem;">Gifts Roulette</h1>
+                <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto 3rem;">
+                    Официальный Telegram-бот с уникальной системой виртуальных подарков
+                </p>
+                <a href="https://t.me/Gifts_Roulette_bot" 
+                   style="display: inline-flex; align-items: center; background: #0088cc; 
+                          color: white; padding: 1.2rem 3rem; border-radius: 30px; 
+                          text-decoration: none; font-size: 1.2rem;">
+                    <i class="fab fa-telegram" style="margin-right: 1rem;"></i>
+                    Начать использовать
+                </a>
+            </div>
+        </section>
+
+        <div class="master-container">
+            <!-- Основные характеристики -->
+            <section class="detailed-section" data-aos="fade-up">
+                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">📌 Основные характеристики</h2>
+                <div class="grid-system">
+                    <div class="info-card">
+                        <h3>🎯 Вероятность выигрыша</h3>
+                        <ul>
+                            <li>60% шанс успешного спина</li>
+                            <li>Алгоритм на основе криптографического генератора</li>
+                            <li>Прозрачная система расчета</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>💳 Система оплаты</h3>
+                        <ul>
+                            <li>Внутренняя валюта Gift Coin (GC)</li>
+                            <li>1 бесплатный спин при регистрации</li>
+                            <li>Последующие спины: 50 GC</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>📤 Вывод средств</h3>
+                        <ul>
+                            <li>Вывод на баланс Telegram</li>
+                            <li>Вывод в сеть TON</li>
+                            <li>Комиссия 5% от суммы</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Руководство пользователя -->
+            <section class="detailed-section" data-aos="fade-up">
+                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">📚 Полное руководство пользователя</h2>
+                <div class="numbered-list">
+                    <div class="numbered-item">
+                        <h3>Регистрация в системе</h3>
+                        <p>Процесс создания аккаунта через Telegram-бота с автоматической привязкой вашего профиля</p>
+                    </div>
+                    
+                    <div class="numbered-item">
+                        <h3>Использование первого спина</h3>
+                        <p>Пошаговая инструкция по активации бесплатной попытки через главное меню</p>
+                    </div>
+                    
+                    <div class="numbered-item">
+                        <h3>Пополнение баланса</h3>
+                        <p>Подробное описание методов покупки GC через интегрированную систему Telegram</p>
+                    </div>
+                    
+                    <div class="numbered-item">
+                        <h3>Механика игры</h3>
+                        <p>Технические детали алгоритма рулетки и системы распределения призов</p>
+                    </div>
+                    
+                    <div class="numbered-item">
+                        <h3>Управление аккаунтом</h3>
+                        <p>Работа с историей транзакций, настройками профиля и безопасностью</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Техническая реализация -->
+            <section class="detailed-section" data-aos="fade-up">
+                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">🔧 Техническая реализация</h2>
+                <div class="grid-system">
+                    <div class="info-card">
+                        <h3>🛠️ Архитектура бота</h3>
+                        <ul>
+                            <li>Серверная часть: Python 3.10</li>
+                            <li>Фреймворк: Aiogram 2.x</li>
+                            <li>База данных: SQLite + JSON</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>🔐 Система безопасности</h3>
+                        <ul>
+                            <li>Шифрование данных AES-256</li>
+                            <li>Двухфакторная аутентификация</li>
+                            <li>Ежедневное резервное копирование</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>📊 Аналитика и мониторинг</h3>
+                        <ul>
+                            <li>Real-time статистика игроков</li>
+                            <li>Система автоматических уведомлений</li>
+                            <li>Детальная история операций</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Системные требования -->
+            <section class="detailed-section" data-aos="fade-up">
+                <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">⚙️ Системные требования</h2>
+                <div class="grid-system">
+                    <div class="info-card">
+                        <h3>Для пользователей</h3>
+                        <ul>
+                            <li>Telegram версии 7.0 и выше</li>
+                            <li>Стабильное интернет-соединение</li>
+                            <li>Поддержка Web Apps</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Для администраторов</h3>
+                        <ul>
+                            <li>Доступ к API Telegram</li>
+                            <li>Сервер с Python 3.10+</li>
+                            <li>Минимум 2GB оперативной памяти</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Пользовательское соглашение -->
+        <section class="detailed-section" data-aos="fade-up">
+            <div class="master-container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">📜 Пользовательское соглашение</h2>
+                <div class="legal-terms">
+                    <div class="term-item">
+                        <h3>1. Принятие условий</h3>
+                        <p>Используя Gifts Roulette, вы подтверждаете что:</p>
+                        <ul>
+                            <li>Достигли возраста совершеннолетия в вашей юрисдикции</li>
+                            <li>Не находитесь под действием санкций OFAC или других ограничений</li>
+                            <li>Берете полную ответственность за свои действия в системе</li>
+                        </ul>
+                    </div>
+
+                    <div class="term-item">
+                        <h3>2. Обязанности пользователя</h3>
+                        <ul>
+                            <li>Запрещено использование методов автоматизации игры</li>
+                            <li>Не допускается создание мультиаккаунтов</li>
+                            <li>Обязательство соблюдать местное законодательство</li>
+                        </ul>
+                    </div>
+
+                    <div class="term-item">
+                        <h3>3. Интеллектуальная собственность</h3>
+                        <ul>
+                            <li>Все виртуальные активы принадлежат платформе</li>
+                            <li>Запрещено reverse-engineering системы</li>
+                            <li>Любые NFT являются лицензированными цифровыми активами</li>
+                        </ul>
+                    </div>
+
+                    <div class="term-item">
+                        <h3>4. Ограничения ответственности</h3>
+                        <ul>
+                            <li>Платформа не гарантирует бесперебойную работу</li>
+                            <li>Технические работы могут проводиться без предупреждения</li>
+                            <li>Риски потери данных лежат на пользователе</li>
+                        </ul>
+                    </div>
+
+                    <div class="term-item">
+                        <h3>5. Изменения условий</h3>
+                        <ul>
+                            <li>Правила могут меняться без предварительного уведомления</li>
+                            <li>Актуальная версия всегда доступна на этом сайте</li>
+                            <li>Продолжение использования означает принятие новых условий</li>
+                        </ul>
+                    </div>
+
+                    <div class="acceptance-notice">
+                        ❗️ Используя бота, вы автоматически принимаете все вышеуказанные условия соглашения
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
